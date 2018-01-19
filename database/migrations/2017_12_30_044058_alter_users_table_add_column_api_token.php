@@ -15,7 +15,7 @@ class AlterUsersTableAddColumnApiToken extends Migration
     {
         Schema::table("users", function (Blueprint $table) {
             //添加 api_token 字段
-            $table->string('api_token')->unique();
+            $table->string('api_token', 40)->unique();
         });
     }
 
